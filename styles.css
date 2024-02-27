@@ -1,43 +1,54 @@
-/* Apply general styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0; /* Adding a light background color */
-}
+/* Your existing CSS styles */
 
+/* Additional CSS for responsiveness */
 .container {
-    text-align: center; /* Center align the image */
-    margin-bottom: 20px; /* Add some space below the image */
+    text-align: center;
+    margin-top: 20px;
 }
 
-.container img {
-    max-width: 100%; /* Make the image responsive */
+img {
+    max-width: 100%;
     height: auto;
 }
 
-.additional-info {
-    padding: 20px; /* Add padding around the additional info */
-    background-color: #fff; /* White background for additional info */
-    margin-bottom: 20px; /* Add some space below the additional info */
+.additional-info, .container {
+    width: 90%;
+    margin: auto;
 }
 
-/* Adjustments for smaller screens */
-@media only screen and (max-width: 600px) {
-    /* Ensure elements maintain their original styles */
-    .container,
-    .container img,
-    .additional-info,
-    h1, h2, p, th, td,
-    table,
-    table th,
-    table td {
-        width: auto !important;
-        max-width: none !important;
-        text-align: left !important;
-        display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        font-size: inherit !important;
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 10px;
+    }
+    .additional-info, .container {
+        width: 95%;
     }
 }
