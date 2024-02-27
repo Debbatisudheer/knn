@@ -31,32 +31,4 @@ body {
         font-size: 16px;
     }
 
-    /* Center align text */
-    h1, h2, p {
-        text-align: left;
-    }
-
-    /* Make tables scroll horizontally on small screens */
-    table {
-        overflow-x: auto;
-        display: block;
-        width: 100%;
-    }
-
-    /* Hide table headers on small screens */
-    table th {
-        display: none;
-    }
-
-    /* Display table cells as block elements */
-    table td {
-        display: block;
-        text-align: center;
-    }
-
-    /* Add margin between table cells */
-    table td:not(:last-child) {
-        margin-bottom: 10px;
-    }
 }
-    
