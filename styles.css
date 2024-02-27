@@ -5,6 +5,23 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; /* Adding a light background color */
+}
+
+.container {
+    text-align: center; /* Center align the image */
+    margin-bottom: 20px; /* Add some space below the image */
+}
+
+.container img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+}
+
+.additional-info {
+    padding: 20px; /* Add padding around the additional info */
+    background-color: #fff; /* White background for additional info */
+    margin-bottom: 20px; /* Add some space below the additional info */
 }
 
 /* Adjustments for smaller screens */
@@ -18,6 +35,28 @@ body {
     h1, h2, p {
         text-align: center;
     }
+
+    /* Make tables scroll horizontally on small screens */
+    table {
+        overflow-x: auto;
+        display: block;
+        width: 100%;
     }
 
+    /* Hide table headers on small screens */
+    table th {
+        display: none;
+    }
+
+    /* Display table cells as block elements */
+    table td {
+        display: block;
+        text-align: center;
+    }
+
+    /* Add margin between table cells */
+    table td:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
     
