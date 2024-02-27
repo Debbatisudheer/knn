@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNN Model Evaluation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+<div class="container">
+    <img src="Figure_1.jpeg" alt="Your Image">
+</div>
+
+<!-- Additional Information -->
+<div class="additional-info">
+     <p><strong>Note:</strong> Accuracy is not always the most important metric, especially in scenarios where class distribution is imbalanced or the costs of different types of errors vary significantly. In such cases, precision, recall, and other metrics provide a more nuanced evaluation of the model's performance and are often more relevant for decision-making.</p>
+    <p>Overall, while the model's performance is decent</p>
+    <p>Since our project goal is to predict diabetes, the most important metric we should consider is recall.</p>
+</div>
+
+<!-- Heading for the KNN Model Evaluation -->
+<h1>KNN Model Evaluation</h1>
+<p>K-Nearest Neighbors (KNN) is a simple, non-parametric machine learning algorithm that predicts the class of a new data point by finding the majority class among its k nearest neighbors in the feature space.</p>
+
+<!-- Display Best Hyperparameters -->
+<h2>Best Hyperparameters</h2>
+<p>Metric: euclidean</p>
+<p>Number of Neighbors: 3</p>
+
+<!-- Display Accuracy -->
+<h2>Accuracy</h2>
+<p>Accuracy: 0.75</p>
+
+<!-- Display Classification Report -->
+<h2>Classification Report</h2>
+<table>
+    <tr>
+        <th></th>
+        <th>Precision</th>
+        <th>Recall</th>
+        <th>F1-Score</th>
+        <th>Support</th>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0.85</td>
+        <td>0.75</td>
+        <td>0.80</td>
+        <td>102</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0.60</td>
+        <td>0.73</td>
+        <td>0.66</td>
+        <td>52</td>
+    </tr>
+</table>
+
+<!-- Display Confusion Matrix -->
+<h2>Confusion Matrix</h2>
+<table>
+    <tr>
+        <th></th>
+        <th>Predicted 0</th>
+        <th>Predicted 1</th>
+    </tr>
+    <tr>
+        <th>Actual 0</th>
+        <td>77</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <th>Actual 1</th>
+        <td>14</td>
+        <td>38</td>
+    </tr>
+</table>
+<!-- Display Classification Report -->
+<h2>Classification Report</h2>
+<ul>
+    <li>
+        <strong>Precision:</strong> Think of precision as the model's accuracy when it says someone has or doesn't have diabetes.
+        <ul>
+            <li>For example, when the model says someone doesn't have diabetes (class 0), it's right about 85% of the time.</li>
+            <li>When it says someone does have diabetes (class 1), it's right about 60% of the time.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Recall:</strong> Recall is about how good the model is at finding all the people who actually have diabetes.
+        <ul>
+            <li>For those who don't have diabetes (class 0), the model finds about 75% of them correctly.</li>
+            <li>For those who do have diabetes (class 1), the model finds about 73% of them correctly.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>F1-score:</strong> It's a balance between precision and recall. It's like having a score that considers both how often the model is right and how often it misses diabetes cases.
+    </li>
+</ul>
+<!-- Display Confusion Matrix -->
+<h2>Confusion Matrix</h2>
+<ul>
+    <li>
+        <strong>True Positives (TP):</strong> These are the cases where the model correctly predicts someone has diabetes.
+        <ul>
+            <li>In this case, it correctly identifies 38 people with diabetes.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>True Negatives (TN):</strong> These are the cases where the model correctly predicts someone doesn't have diabetes.
+        <ul>
+            <li>It correctly identifies 77 people without diabetes.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>False Positives (FP):</strong> These are the cases where the model wrongly predicts someone has diabetes when they don't.
+        <ul>
+            <li>It wrongly predicts 25 people have diabetes when they actually don't.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>False Negatives (FN):</strong> These are the cases where the model wrongly predicts someone doesn't have diabetes when they do.
+        <ul>
+            <li>It misses 14 people who actually have diabetes.</li>
+        </ul>
+    </li>
+</ul>
+
+<!-- Summary -->
+<h2>Summary</h2>
+<ul>
+    <li>Overall, the model is correct about 75% of the time.</li>
+    <li>It's good at identifying people without diabetes.</li>
+    <li>It's getting better at finding people with diabetes.</li>
+    <li>So, while the model is doing okay.</li>
+</ul>
+
+<!-- Display Accuracy, Precision, Recall, and F1-score -->
+<h2>Accuracy, Precision, Recall, and F1-score</h2>
+<p>
+    <strong>Accuracy:</strong> The overall accuracy of the model is 75%, meaning it correctly predicts the outcome for 75% of the cases in the test dataset. This is a decent accuracy level, but it's important to consider other metrics as well.
+</p>
+<p>
+    <strong>Precision and Recall:</strong>
+    <ul>
+        <li>For class 0 (no diabetes), precision (85%) and recall (75%) are relatively high. This indicates that the model is good at correctly identifying individuals without diabetes, and it can capture a good proportion of those who truly don't have diabetes.</li>
+        <li>For class 1 (diabetes), precision (60%) and recall (73%) are lower compared to class 0. While precision has room for improvement, recall is relatively better, indicating that the model is becoming better at capturing individuals with diabetes, but there are still some false positives.</li>
+    </ul>
+</p>
+<p>
+    <strong>F1-score:</strong> The weighted average F1-score is 75%, which is a harmonic mean of precision and recall. It provides a balance between precision and recall. The F1-score is important as it considers both false positives and false negatives.
+</p>
+<!-- Importance of Recall in Diabetes Prediction -->
+<h2>Importance of Recall in Diabetes Prediction</h2>
+<p>
+    Project goal is to predict diabetes, the most crucial metric to prioritize would likely be recall. Here's why:
+</p>
+<ul>
+    <li><strong>Importance of Recall in Diabetes Prediction:</strong> In the context of predicting diabetes, correctly identifying all individuals who have diabetes (true positives) is crucial to ensure they receive appropriate medical attention, treatment, and lifestyle management. Missing even a single case of diabetes (false negative) could have significant health consequences for the individual.</li>
+</ul>
+<p>
+    In summary, for a project focused on predicting diabetes, prioritizing recall ensures that the model effectively identifies individuals with diabetes, minimizing the risk of false negatives and facilitating timely interventions and management strategies. However, it's also essential to monitor other metrics to ensure a comprehensive assessment of the model's performance.
+</p>
+
+<!-- Improvement in Recall -->
+<h2>Improvement in Recall</h2>
+<p>
+    This improvement in recall suggests that the model has become better at correctly identifying individuals with diabetes. Specifically, out of all the individuals who actually have diabetes, the model now correctly identifies a higher proportion (73%) compared to previous versions.
+</p>
+
+<!-- Summary of Key Metrics -->
+<h2>Summary of Key Metrics</h2>
+<ul>
+    <li><strong>Precision for class 1 (diabetes):</strong> 0.60</li>
+    <li><strong>Recall for class 1 (diabetes):</strong> 0.73</li>
+    <li><strong>F1-score for class 1 (diabetes):</strong> 0.66</li>
+</ul>
+<p>
+    While recall has improved, precision for class 1 remains at 0.60, which means there is still room for improvement in reducing false positives. However, the overall performance of the model has improved with the increase in recall.
+</p>
+<p>
+    Overall, achieving a balance between precision and recall is important, and the improvements in recall indicate progress towards better performance in correctly identifying individuals with diabetes.
+</p>
+<!-- Confusion Matrix -->
+<h2>Confusion Matrix</h2>
+<ul>
+    <li>
+        <strong>True Positives (TP):</strong>
+        <p>This number (38) represents the cases where the model correctly predicts that someone has diabetes.</p>
+    </li>
+    <li>
+        <strong>True Negatives (TN):</strong>
+        <p>This number (77) represents the cases where the model correctly predicts that someone does not have diabetes.</p>
+    </li>
+    <li>
+        <strong>False Positives (FP):</strong>
+        <p>This number (25) represents the cases where the model wrongly predicts that someone has diabetes when they actually do not.</p>
+    </li>
+    <li>
+        <strong>False Negatives (FN):</strong>
+        <p>This number (14) represents the cases where the model wrongly predicts that someone does not have diabetes when they actually do.</p>
+    </li>
+</ul>
+
+<!-- Summary -->
+<h2>Summary</h2>
+<ul>
+    <li>Out of all the individuals who truly have diabetes, the model correctly identified 38 of them (True Positives).</li>
+    <li>Out of all the individuals who truly do not have diabetes, the model correctly identified 77 of them (True Negatives).</li>
+    <li>There were 25 cases where the model predicted diabetes incorrectly for individuals who do not actually have it (False Positives).</li>
+    <li>There were 14 cases where the model failed to predict diabetes for individuals who actually have it (False Negatives).</li>
+</ul>
+
+<p>
+    In your case, the model has a relatively higher number of false positives (25) compared to false negatives (14). This suggests that while the model is performing reasonably well.
+</p>
+<!-- Importance of Recall in Diabetes Prediction -->
+<h2>Importance of Recall in Diabetes Prediction</h2>
+<ul>
+    <li>
+        <p>In the context of predicting diabetes, correctly identifying all individuals who have diabetes (true positives) is crucial to ensure they receive appropriate medical attention, treatment, and lifestyle management. Missing even a single case of diabetes (false negative) could have significant health consequences for the individual.</p>
+    </li>
+</ul>
+
+<!-- Minimizing False Negatives -->
+<h2>Minimizing False Negatives</h2>
+<ul>
+    <li>
+        <p>False negatives in diabetes prediction mean failing to identify individuals who actually have diabetes. This can lead to delays in diagnosis, lack of timely interventions, and increased risk of complications associated with untreated diabetes.</p>
+    </li>
+    <li>
+        <p>Maximizing recall ensures that the model captures as many true positive cases of diabetes as possible, minimizing the chances of missing individuals who need medical attention.</p>
+    </li>
+</ul>
+
+<!-- Trade-off with Precision -->
+<h2>Trade-off with Precision</h2>
+<ul>
+    <li>
+        <p>While maximizing recall is important, it's also essential to consider precision, especially in a medical context. However, in the case of diabetes prediction, it might be more acceptable to have slightly lower precision (i.e., more false positives) if it means capturing all individuals with diabetes (higher recall).</p>
+    </li>
+</ul>
+
+<!-- Overall Model Performance -->
+<h2>Overall Model Performance</h2>
+<ul>
+    <li>
+        <p>While recall is prioritized, it's still important to monitor other metrics such as precision, accuracy, and F1-score to ensure overall model performance. A well-rounded evaluation considers multiple metrics to understand different aspects of the model's behavior.</p>
+    </li>
+</ul>
+
+<!-- Summary -->
+<p>
+    In summary, for a project focused on predicting diabetes, prioritizing recall ensures that the model effectively identifies individuals with diabetes, minimizing the risk of false negatives and facilitating timely interventions and management strategies. However, it's also essential to monitor other metrics to ensure a comprehensive assessment of the model's performance.
+</p>
+<!-- Strategies to Improve Model Performance -->
+<h2>Strategies to Improve Model Performance</h2>
+<ul>
+    <li>
+        <p><strong>Feature Engineering:</strong> Explore and engineer new features that might better capture the underlying patterns in the data related to diabetes. This could involve domain knowledge, feature transformations, or creating new features from existing ones.</p>
+    </li>
+    <li>
+        <p><strong>Data Preprocessing:</strong> Ensure thorough data preprocessing steps such as handling missing values, scaling features appropriately, and addressing any outliers in the data. This can help improve the model's robustness and performance.</p>
+    </li>
+    <li>
+        <p><strong>Model Selection:</strong> Experiment with different machine learning algorithms apart from K-Nearest Neighbors (KNN) to see if another algorithm might better capture the complexities of the data. Consider algorithms like logistic regression, decision trees, random forests, or gradient boosting.</p>
+    </li>
+    <li>
+        <p><strong>Hyperparameter Tuning:</strong> Fine-tune the hyperparameters of the KNN model or other algorithms to find the optimal configuration that maximizes performance. Grid search, random search, or Bayesian optimization can be used for this purpose.</p>
+    </li>
+    <li>
+        <p><strong>Handling Class Imbalance:</strong> If your dataset is imbalanced (i.e., one class is significantly more prevalent than the other), consider techniques such as oversampling the minority class, undersampling the majority class, or using algorithms that handle class imbalance well, such as ensemble methods or techniques like SMOTE (Synthetic Minority Over-sampling Technique).</p>
+    </li>
+    <li>
+        <p><strong>Feature Selection:</strong> Identify the most informative features and remove irrelevant or redundant ones. This can help reduce noise in the data and improve model generalization.</p>
+    </li>
+    <li>
+        <p><strong>Ensemble Methods:</strong> Explore ensemble methods such as bagging (e.g., Random Forest) or boosting (e.g., Gradient Boosting Machines) to combine multiple models for improved performance and robustness.</p>
+    </li>
+    <li>
+        <p><strong>Cross-Validation:</strong> Use robust cross-validation techniques to evaluate model performance and ensure generalizability to unseen data. This helps in detecting overfitting and selecting models that generalize well.</p>
+    </li>
+</ul>
+<footer>
+    <p>&copy; 2024 @sudheer debbati. All rights reserved.</p>
+</footer>
+</body>
+</html>
+

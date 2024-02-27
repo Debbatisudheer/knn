@@ -1,0 +1,45 @@
+/* Styles for mobile responsiveness */
+
+/* Apply general styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 600px) {
+    /* Adjust font size */
+    h1, h2, p, th, td {
+        font-size: 16px;
+    }
+
+    /* Center align text */
+    h1, h2, p {
+        text-align: center;
+    }
+
+    /* Make tables scroll horizontally on small screens */
+    table {
+        overflow-x: auto;
+        display: block;
+        width: 100%;
+    }
+
+    /* Hide table headers on small screens */
+    table th {
+        display: none;
+    }
+
+    /* Display table cells as block elements */
+    table td {
+        display: block;
+        text-align: center;
+    }
+
+    /* Add margin between table cells */
+    table td:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
