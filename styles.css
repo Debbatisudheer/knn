@@ -41,5 +41,12 @@ body {
     table td:not(:last-child) {
         margin-bottom: 10px;
     }
+     /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center align the image */
+    }
 }
 
